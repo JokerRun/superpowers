@@ -147,7 +147,13 @@ All 14 skills use the **same template depth** (Option A: uniform depth). Complex
 
 ## Content Sources
 
-- **Original content:** Source files in `skills/` directory of this repo
+- **Original content:** All files under `skills/*/` in this repo:
+  - Every skill: `skills/<name>/SKILL.md`
+  - Subagent prompts: `skills/<name>/*-prompt.md`
+  - Reference docs: `skills/<name>/references/*.md`
+  - Supplementary: any additional `.md`, `.sh`, `.ts`, `.dot` files in the skill directory
+  - `writing-skills` only: `skills/writing-skills/examples/CLAUDE_MD_TESTING.md`
+- **Translation style:** Technical terms and code identifiers stay in English (e.g., `worktree`, `SKILL.md`, skill names). All prose translated to Chinese.
 - **Examples/cases:** Purely theoretical, constructed from skill doc content (no real project cases)
 - **Audience:** Self-reference + others learning the system; both quick-lookup and deep-read modes supported
 
