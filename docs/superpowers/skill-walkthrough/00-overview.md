@@ -18,6 +18,12 @@
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                         writing-plans (03)                                   │
 │              spec → 实现计划文档 → plan-review-loop → 执行方式选择            │
+└──────┬──────────────────────────────────────────────────────────────────────┘
+       │ 计划通过后必须调用
+       ▼
+┌──────────────────────────────────────────────────────────────────────────────┐
+│                       using-git-worktrees (04)                               │
+│           隔离工作区 → branch → setup → baseline test verification           │
 └──────┬──────────────────────────────────┬────────────────────────────────────┘
        │ 用户选"Subagent 模式"            │ 用户选"Inline 模式"
        ▼                                  ▼
@@ -29,14 +35,9 @@
 │ 新 subagent           │     │ with review checkpoints   │
 └──────┬───────────────┘     └──────────┬─────────────────┘
        │                               │
-       │  两者都需要在开始前调用         │
-       ▼                               ▼
-┌──────────────────────────────────────────────────────────────────────────────┐
-│                       using-git-worktrees (04)                               │
-│           隔离工作区 → branch → setup → baseline test verification           │
-└──────────────────────────────────────────────────────────────────────────────┘
-       │ subagent 执行每个任务时
-       ▼
+       └──────────────┬────────────────┘
+                      │ subagent 执行每个任务时
+                      ▼
 ┌──────────────────────────────────────────────────────────────────────────────┐
 │                    test-driven-development (08)                              │
 │               RED (写失败测试) → GREEN (最小实现) → REFACTOR                  │
@@ -106,7 +107,7 @@ using-git-worktrees ◄───────────────────
 | 01 | using-superpowers | 任何 session 开始时 | Skill 调用规则 + 优先级框架 | — (入口) | 所有其他 skill |
 | 02 | brainstorming | 任何创意/功能/需求出现时，写代码之前 | 设计稿 + spec doc (含 spec-review-loop) | using-superpowers | writing-plans |
 | 03 | writing-plans | 有 spec 或需求、开始动代码之前 | 实现计划文档 (含 plan-review-loop) | brainstorming | subagent-driven-development 或 executing-plans |
-| 04 | using-git-worktrees | 开始功能开发 / 执行计划之前需要隔离工作区时 | 隔离 worktree + baseline 测试通过 | brainstorming, subagent-driven-development, executing-plans | finishing-a-development-branch (清理) |
+| 04 | using-git-worktrees | 开始功能开发 / 执行计划之前需要隔离工作区时 | 隔离 worktree + baseline 测试通过 | writing-plans (via brainstorming approval) | executing-plans, subagent-driven-development |
 | 05 | executing-plans | 有计划文档、选择 inline 执行时 | 任务逐步执行 + review checkpoints | writing-plans | finishing-a-development-branch |
 | 06 | subagent-driven-development | 有计划文档、选择 subagent 模式执行时 | 每任务 dispatch 新 subagent + 两阶段 review | writing-plans | finishing-a-development-branch |
 | 07 | dispatching-parallel-agents | 存在 2+ 个独立任务/bug/test failures 可并行时 | 多 subagent 并行执行 + 整合结果 | 执行阶段内部（subagent-driven-dev / executing-plans）| 汇总后继续执行流 |
