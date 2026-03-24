@@ -16,7 +16,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: systematic-debugging
 description: Use when encountering any bug, test failure, or unexpected behavior, before proposing fixes
@@ -34,9 +34,9 @@ Random fixes waste time and create new bugs. Quick patches mask underlying issue
 
 ## The Iron Law
 
-```
+````
 NO FIXES WITHOUT ROOT CAUSE INVESTIGATION FIRST
-```
+````
 
 If you haven't completed Phase 1, you cannot propose fixes.
 
@@ -313,13 +313,13 @@ From debugging sessions:
 - Random fixes approach: 2-3 hours of thrashing
 - First-time fix rate: 95% vs 40%
 - New bugs introduced: Near zero vs common
-```
+````
 
 ---
 
 ### root-cause-tracing.md
 
-```markdown
+````markdown
 # Root Cause Tracing
 
 ## Overview
@@ -343,7 +343,7 @@ Bugs often manifest deep in the call stack (git init in wrong directory, file cr
 ### 1. Observe the Symptom
 ```
 Error: git init failed in /Users/jesse/project/packages/core
-```
+````
 
 ### 2. Find Immediate Cause
 **What code directly causes this?**
@@ -372,6 +372,8 @@ const context = setupCoreTest(); // Returns { tempDir: '' }
 Project.create('name', context.tempDir); // Accessed before beforeEach!
 ```
 
+````
+
 ## Adding Stack Traces
 
 When you can't trace manually, add instrumentation:
@@ -389,7 +391,7 @@ async function gitInit(directory: string) {
 
   await execFileAsync('git', ['init'], { cwd: directory });
 }
-```
+````
 
 **Critical:** Use `console.error()` in tests (not logger - may not show)
 
@@ -456,7 +458,7 @@ From debugging session (2025-10-03):
 - Fixed at source (getter validation)
 - Added 4 layers of defense
 - 1847 tests passed, zero pollution
-```
+````
 
 ---
 
@@ -628,6 +630,8 @@ const result = getResult();
 expect(result).toBeDefined();
 ```
 
+````
+
 ## Quick Patterns
 
 | Scenario | Pattern |
@@ -696,7 +700,7 @@ From debugging session (2025-10-03):
 - Pass rate: 60% → 100%
 - Execution time: 40% faster
 - No more race conditions
-```
+````
 
 ---
 

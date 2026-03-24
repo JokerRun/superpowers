@@ -15,7 +15,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: writing-plans
 description: Use when you have a spec or requirements for a multi-step task, before touching code
@@ -76,7 +76,7 @@ This structure informs the task decomposition. Each task should produce self-con
 **Tech Stack:** [Key technologies/libraries]
 
 ---
-```
+````
 
 ## Task Structure
 

@@ -16,7 +16,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: writing-skills
 description: Use when creating new skills, editing existing skills, or verifying skills work before deployment
@@ -90,12 +90,12 @@ API docs, syntax guides, tool documentation (office docs)
 
 ## Directory Structure
 
-```
+````
 skills/
   skill-name/
     SKILL.md              # Main reference (required)
     supporting-file.*     # Only if needed
-```
+````
 
 **Flat namespace** - all skills in one searchable namespace
 
@@ -138,7 +138,7 @@ description: Use when executing plans - dispatches subagent per task with code r
 
 # ✅ GOOD: Just triggering conditions, no workflow summary
 description: Use when executing implementation plans with independent tasks in the current session
-```
+````
 
 ### 4. Token Efficiency (Critical)
 
@@ -158,9 +158,9 @@ description: Use when executing implementation plans with independent tasks in t
 
 ## The Iron Law (Same as TDD)
 
-```
+````
 NO SKILL WITHOUT A FAILING TEST FIRST
-```
+````
 
 This applies to NEW skills AND EDITS to existing skills.
 
@@ -218,7 +218,7 @@ helper1, helper2, step3, pattern4
 - [ ] Build rationalization table
 - [ ] Create red flags list
 - [ ] Re-test until bulletproof
-```
+````
 
 ---
 
@@ -241,12 +241,14 @@ The context window is a public good. Only the metadata (name and description) is
 ```python
 with pdfplumber.open("file.pdf") as pdf:
     text = pdf.pages[0].extract_text()
-```
+````
 
 **Bad example: Too verbose** (~150 tokens):
-```
+````
 PDF (Portable Document Format) files are a common file format...
-```
+````
+
+````
 
 ### Set appropriate degrees of freedom
 
@@ -274,7 +276,7 @@ Good examples:
 ```yaml
 description: Extract text and tables from PDF files, fill forms, merge documents. Use when working with PDF files.
 description: Generate descriptive commit messages by analyzing git diffs. Use when the user asks for help writing commit messages.
-```
+````
 
 ### Progressive disclosure patterns
 
@@ -318,7 +320,7 @@ Develop skills iteratively with Claude (Claude A helps write, Claude B tests in 
 - [ ] File references are one level deep
 - [ ] At least three evaluations created
 - [ ] Tested with Haiku, Sonnet, Opus
-```
+````
 
 ---
 
@@ -482,7 +484,7 @@ Three responses:
 
 ### render-graphs.js
 
-```javascript
+````javascript
 #!/usr/bin/env node
 
 /**
@@ -500,7 +502,7 @@ Three responses:
 // 功能：从 SKILL.md 的 ```dot 块提取 graphviz 图，渲染为 SVG
 // 输出到 skill 目录下的 diagrams/ 目录
 // 支持 --combine 参数将所有图合并为一个 SVG
-```
+````
 
 ---
 
@@ -863,7 +865,7 @@ GREEN phase：写最小化 skill
 
 ✅ "Use when executing implementation plans with independent tasks"
 ❌ "Use when executing plans - dispatches subagent per task with code review between tasks"
-```
+````
 
 ### 3.5 与其他 Skills 的协作关系
 

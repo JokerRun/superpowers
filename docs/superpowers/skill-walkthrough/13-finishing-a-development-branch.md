@@ -16,7 +16,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: finishing-a-development-branch
 description: Use when implementation is complete, all tests pass, and you need to decide how to integrate the work - guides completion of development work by presenting structured options for merge, PR, or cleanup
@@ -41,10 +41,10 @@ Guide completion of development work by presenting clear options and handling ch
 ```bash
 # Run project's test suite
 npm test / cargo test / pytest / go test ./...
-```
+````
 
 **If tests fail:**
-```
+````
 Tests failing (<N> failures). Must fix before completing:
 
 [Show failures]
@@ -247,6 +247,7 @@ npm test / cargo test / pytest / go test ./...
 如果测试失败：停止。不进入 Step 2。报告失败并要求先修复。
 
 如果测试通过：继续 Step 2。
+````
 
 **Step 2：确定基础分支**
 
