@@ -256,7 +256,7 @@ Skills 使用 Claude Code 的工具名称。非 CC 平台：Codex 用户参见 `
 
 **在任何响应或行动之前，先调用相关或被请求的 skill。** 哪怕只有 1% 的可能某个 skill 适用，你也应该调用它来检查。如果调用后发现该 skill 不适合当前情况，无需继续使用它。
 
-（流程图见 3.4 节）
+*（原文此处为 Graphviz dot 格式流程图，ASCII 重绘版本见 3.4 节）*
 
 **警示信号（Red Flags）**
 
@@ -565,4 +565,5 @@ Continue normal skill flow
 | dispatching-parallel-agents | 下游 | 多 subagent 并行执行 |
 | verification-before-completion | 下游 | 任务完成前的最终验证 |
 | writing-skills | 下游 | 编写或改进 skills 本身时 |
-| 所有上游 skills | 无 | using-superpowers 是入口，没有任何 skill 在它之前 |
+
+> 此 skill 为系统入口，无上游调用方。
