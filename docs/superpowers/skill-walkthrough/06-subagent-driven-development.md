@@ -15,7 +15,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: subagent-driven-development
 description: Use when executing implementation plans with independent tasks in the current session
@@ -47,7 +47,7 @@ digraph when_to_use {
     "Stay in this session?" -> "subagent-driven-development" [label="yes"];
     "Stay in this session?" -> "executing-plans" [label="no - parallel session"];
 }
-```
+````
 
 **vs. Executing Plans (parallel session):**
 - Same session (no context switch)

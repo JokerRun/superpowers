@@ -16,7 +16,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: test-driven-development
 description: Use when implementing any feature or bugfix, before writing implementation code
@@ -49,9 +49,9 @@ Thinking "skip TDD just this once"? Stop. That's rationalization.
 
 ## The Iron Law
 
-```
+````
 NO PRODUCTION CODE WITHOUT A FAILING TEST FIRST
-```
+````
 
 Write code before the test? Delete it. Start over.
 

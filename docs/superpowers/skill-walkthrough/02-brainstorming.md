@@ -16,7 +16,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: brainstorming
 description: "You MUST use this before any creative work - creating features, building components, adding functionality, or modifying behavior. Explores user intent, requirements and design before implementation."
@@ -150,13 +150,13 @@ A question about a UI topic is not automatically a visual question. "What does p
 
 If they agree to the companion, read the detailed guide before proceeding:
 `skills/brainstorming/visual-companion.md`
-```
+````
 
 ---
 
 ### spec-document-reviewer-prompt.md
 
-```
+````
 # Spec Document Reviewer Prompt Template
 
 Use this template when dispatching a spec document reviewer subagent.
@@ -210,7 +210,7 @@ Task tool (general-purpose):
 
 ### visual-companion.md
 
-```
+````
 # Visual Companion Guide
 
 Browser-based visual brainstorming companion for showing mockups, diagrams, and options.
@@ -252,6 +252,8 @@ scripts/start-server.sh --project-dir /path/to/project
 # Returns: {"type":"server-started","port":52341,"url":"http://localhost:52341",
 #           "screen_dir":"/path/to/project/.superpowers/brainstorm/12345-1706000000"}
 ```
+
+````
 
 Save `screen_dir` from the response. Tell user to open the URL.
 
@@ -497,7 +499,7 @@ If the session used `--project-dir`, mockup files persist in `.superpowers/brain
 
 - Frame template (CSS reference): `scripts/frame-template.html`
 - Helper script (client-side): `scripts/helper.js`
-```
+````
 
 ---
 
@@ -679,7 +681,7 @@ spec 审查通过后，请用户在继续前审查已写入的 spec：
 
 **输出格式：**
 
-```
+````
 ## Spec Review
 
 **Status:** Approved | Issues Found
@@ -689,7 +691,7 @@ spec 审查通过后，请用户在继续前审查已写入的 spec：
 
 **Recommendations (advisory, do not block approval):**
 - [suggestions for improvement]
-```
+````
 
 **审查者返回：** Status、Issues（如有）、Recommendations
 

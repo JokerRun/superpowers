@@ -16,7 +16,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: requesting-code-review
 description: Use when completing tasks, implementing major features, or before merging to verify work meets requirements
@@ -46,7 +46,7 @@ Dispatch superpowers:code-reviewer subagent to catch issues before they cascade.
 ```bash
 BASE_SHA=$(git rev-parse HEAD~1)  # or origin/main
 HEAD_SHA=$(git rev-parse HEAD)
-```
+````
 
 **2. Dispatch code-reviewer subagent:**
 
@@ -67,7 +67,7 @@ Use Task tool with superpowers:code-reviewer type, fill template at `code-review
 
 ## Example
 
-```
+````
 [Just completed Task 2: Add verification function]
 
 You: Let me request code review before proceeding.
@@ -91,7 +91,7 @@ HEAD_SHA=$(git rev-parse HEAD)
 
 You: [Fix progress indicators]
 [Continue to Task 3]
-```
+````
 
 ## Integration with Workflows
 
@@ -122,7 +122,7 @@ You: [Fix progress indicators]
 - Request clarification
 
 See template at: requesting-code-review/code-reviewer.md
-```
+````
 
 ---
 
@@ -156,7 +156,7 @@ You are reviewing code changes for production readiness.
 ```bash
 git diff --stat {BASE_SHA}..{HEAD_SHA}
 git diff {BASE_SHA}..{HEAD_SHA}
-```
+````
 
 ## Review Checklist
 
@@ -240,7 +240,7 @@ git diff {BASE_SHA}..{HEAD_SHA}
 
 ## Example Output
 
-```
+````
 ### Strengths
 - Clean database schema with proper migrations (db.ts:15-42)
 - Comprehensive test coverage (18 tests, all edge cases)
@@ -382,7 +382,7 @@ PLAN_OR_REQUIREMENTS: docs/superpowers/plans/coupon-plan.md Task 3
 BASE_SHA: abc123
 HEAD_SHA: def456
 DESCRIPTION: 实现了百分比折扣、固定金额折扣和最大折扣上限功能
-```
+````
 
 Reviewer 返回：
 ```

@@ -16,7 +16,7 @@
 
 ### SKILL.md
 
-```
+````
 ---
 name: using-superpowers
 description: Use when starting any conversation - establishes how to find and use skills, requiring Skill tool invocation before ANY response including clarifying questions
@@ -90,7 +90,7 @@ digraph skill_flow {
     "Has checklist?" -> "Follow skill exactly" [label="no"];
     "Create TodoWrite todo per item" -> "Follow skill exactly";
 }
-```
+````
 
 ## Red Flags
 
@@ -132,11 +132,11 @@ The skill itself tells you which.
 ## User Instructions
 
 Instructions say WHAT, not HOW. "Add X" or "Fix Y" doesn't mean skip workflows.
-```
+````
 
 ### references/codex-tools.md
 
-```
+````
 # Codex Tool Mapping
 
 Skills use Claude Code tool names. When you encounter these in a skill, use your platform equivalent:
@@ -162,11 +162,10 @@ multi_agent = true
 ```
 
 This enables `spawn_agent`, `wait`, and `close_agent` for skills like `dispatching-parallel-agents` and `subagent-driven-development`.
-```
 
 ### references/gemini-tools.md
 
-```
+````
 # Gemini CLI Tool Mapping
 
 Skills use Claude Code tool names. When you encounter these in a skill, use your platform equivalent:
@@ -210,11 +209,11 @@ These tools are available in Gemini CLI but have no Claude Code equivalent:
 
 **frontmatter**
 
-```
+````
 name: using-superpowers
 description: 在任意对话开始时使用——建立发现和使用 skills 的规范，
 要求在做出任何响应（包括澄清性提问）之前必须调用 Skill 工具
-```
+````
 
 **SUBAGENT-STOP**
 
